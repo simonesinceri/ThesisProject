@@ -13,6 +13,7 @@ function [st ,r ,output] = simulation2D(w,gridx,gridy,gridvx,gridvy,gridyaw,M,N,
 %[az_1,az_2] = ind2sub([3 3], a_in);
 
 output = sim("model_graphicSim.slx");
+%output = sim("model_graphicSim_onlyYaw.slx");
 %output = sim("model_graphicSim_OnlyDist.slx");
 
 st = output.stato;

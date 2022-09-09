@@ -55,7 +55,7 @@ ubyaw = 90;
 
 
 Ts = 0.1; % tempo campionamento scenario
-numEpisodes = 10000;
+numEpisodes = 5000;
 epsilon = 1e-1;
 alpha = 1e-3;
 gamma = 0.9; %1
@@ -83,7 +83,7 @@ d = A*N*nCells;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %w = zeros(d, 1);                                        % attention !!!
-load test_sim_10000Ep_v1_dist.mat w
+load test_sim_5000Ep_v1_ALL.mat w
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 % devo definire range stato iniziale
@@ -154,4 +154,4 @@ for i=1:numEpisodes
 
 %toc
 
-save test_sim_20000Ep_v2_dist.mat w Ts lb_angSt ub_angSt gridx gridy gridvx gridvy gridyaw M N A passo_v passo_steerang d egoID lby uby lbx ubx lbvx ubvx lbvy ubvy lbyaw ubyaw safetyDist leftDistCG retroDistCG frontDistCG
+save test_sim_10000Ep_v2_ALL.mat w Ts lb_angSt ub_angSt gridx gridy gridvx gridvy gridyaw M N A passo_v passo_steerang d egoID lby uby lbx ubx lbvx ubvx lbvy ubvy lbyaw ubyaw safetyDist leftDistCG retroDistCG frontDistCG
